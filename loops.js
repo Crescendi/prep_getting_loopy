@@ -40,8 +40,8 @@ var valueAtPosition = "";
 function printContent(valarray){
 	console.log("Bonus: ");
 	for (var i = 0; i < valarray.length; i++) {
-		console.log("The value of i is: ", i);
-		console.log("The value at Index is: ", valarray[i]);
+		console.log("The value of i is: ", i, "and the value at Index is: ", valarray[i]);
+		// console.log("The value at Index is: ", valarray[i]);
 	}
 	return position,valueAtPosition;
 }
@@ -171,12 +171,42 @@ for (var i = oopsArray.length; i >= 0; i--) {
 }
 
 
+/*
+`isNapTime`
+Declare a variable named `isNapTime`. Set it to `false`
 
+Declare a variable named `napSchedule`. Set it's value to be an `Array` with the values `[false, false, true, false, true, true]`
 
+Declare a function named `nap`. This function takes in a single parameter called `schedule`
 
+- If `schedule` is `true` then use `console.log` to display the message `ZzZzZzZz`
+- otherwise if `schedule` is `false` use `console.log` to display the message `Gotta get to work!` and then change the value of `isNapTime` to `true`
 
+Now, Write a FOR loop that iterates through the `napSchedule` array and runs the function `nap` while passing in the value at the current position of `napSchedule` into the `nap` function.
 
+exmaple of output:
 
+![example-2](https://s3.amazonaws.com/uploads.hipchat.com/54891/1222770/mpHi
+*/
+
+console.log("Excersise #6");
+
+var isNapTime = false;
+var napSchedule = [false, false, true, false, true, true];
+
+function nap(schedule) {
+	if (schedule === true) {
+			console.log("ZzZzZzZz");
+		}else{
+			console.log("Gotta get to work!");
+			isNapTime = true;
+		}
+}
+for (var i = 0; i < napSchedule.length; i++) {
+	nap(napSchedule[i]);
+	// console.log(i, ": ", napSchedule[i]);
+}
+console.log("isNap", isNapTime);
 
 
 
