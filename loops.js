@@ -294,24 +294,60 @@ console.log("array of string only: ", newArray);
 console.log("Excersise #Final Boss - ");
 
 
-var currentClass = ['https://gist.github.com/sgnl/e40879b2249e06ca7811'];
+var currentClass = [
+  {
+    name: 'Doug',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Pat',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Marsha',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Moira',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Ben',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Nigel the Giraffe',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Brandon the Shark',
+    graduated: false,
+    enrolled: true
+  }
+];
+
+console.log("original objects: ", currentClass);
 
 function graduateAndSetNewClass (classvalue) {
 	for (var i = 0; i < classvalue.length; i++) {
-		console.log(classvalue[i]);
+		if (classvalue[i].enrolled === true) {
+			classvalue[i].graduated = true;
+		}else{ 
+			classvalue[i].enrolled = true;
+		}
 	}
-
-	// for (var i = 0; i < class.length; i++) { 	
-
-		// if ( class[i.enrolled] === true ) {
-		// 	class.graduate = true;
-		// }else{
-		// 	class.enrolled = true;
-		// }
-	
+	// return currentClass;
 }
 
 graduateAndSetNewClass(currentClass);
+
+console.log("overrided objects: ", currentClass);
 
 
 
