@@ -209,6 +209,145 @@ for (var i = 0; i < napSchedule.length; i++) {
 console.log("isNap", isNapTime);
 
 
+/*
+ `CopyArray - clone array values`
+Declare a variable named `copyOfValuesArray` and set it's value to be an empty array, `[]`.
+
+Declare a variable named `valuesArray` and set it's value to be an array, `[99, 66, 829, 1941, 8, 76]`.
+
+Declare a function named `copyArray` which takes two arguments: `originArray` and `destinationArray`. 
+
+Inside of this function you will loop through the contents of `originArray` and push each value into 
+`destinationArray`.
+
+To get started, below your function declaration, call your function and pass in the two variables, 
+`valuesArray` and `copyOfValuesArray`. After that, use `console.log` to to inspect the values of `valuesArray` 
+and `copyOfValuesArray` to make sure they have the same values (which means your function worked!).
+
+*/
+
+console.log("Excersise #7");
+
+var copyOfValuesArray = [];
+var valuesArray = [99, 66, 829, 1941, 8, 76];
+
+function copyArray (originArray,destinationArray) {
+
+	for (var i = 0; i < originArray.length; i++) {
+		destinationArray.push(originArray[i]);
+	}
+}
+
+copyArray(valuesArray,copyOfValuesArray);
+console.log("source: ",valuesArray);
+console.log("target: ",copyOfValuesArray);
+
+
+/*
+*
+Final Boss
+
+![final-boss](https://s3.amazonaws.com/uploads.hipchat.com/54891/2015941/zamX8AqbgYw0QJ8/giphy.gif)
+
+## Stage 1 - Only String Values
+Declare a variable named `miscStorage` set it's value to be: 
+`[ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ]`
+
+Declare a function named `generateArrayOfStrings` which takes a single argument `storage`. 
+This function returns a new Array with only `String` values inside of it.
+
+## Final Form - Change values of objects stored within an Array
+It's that time again, we need to graduate the current class of students and start enrollment for the next class.
+
+Declare a variable named `currentClass` and set it's value to be this 
+[array found here](https://gist.github.com/sgnl/e40879b2249e06ca7811).
+
+Declare a function named `graduateAndSetNewClass`, it takes a single argument called `class`.
+
+Your function will iterate through the `class` argument and check each student's `enrolled` property.
+
+If the `enrolled` property is set to `true` then change that student's `graduated` property to `true`. 
+Otherwise, if `enrolled` is set to `false` then change `enrolled` to `true` leaving `graduated` alone 
+and unchanged.
+
+*/
+
+console.log("Excersise #Final Boss - Stage 1");
+
+var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ];
+var newArray = [];
+
+function generateArrayOfStrings (storage) {
+	for (var i = 0; i < storage.length; i++) {
+		if ( typeof storage[i] === "string" ) {
+			newArray.push(storage[i]);
+		}
+	}
+}
+
+generateArrayOfStrings(miscStorage);
+
+console.log("source array: ", miscStorage);
+console.log("array of string only: ", newArray);
+
+
+console.log("Excersise #Final Boss - ");
+
+
+var currentClass = ['https://gist.github.com/sgnl/e40879b2249e06ca7811'];
+
+function graduateAndSetNewClass (classvalue) {
+	for (var i = 0; i < classvalue.length; i++) {
+		console.log(classvalue[i]);
+	}
+
+	// for (var i = 0; i < class.length; i++) { 	
+
+		// if ( class[i.enrolled] === true ) {
+		// 	class.graduate = true;
+		// }else{
+		// 	class.enrolled = true;
+		// }
+	
+}
+
+graduateAndSetNewClass(currentClass);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
