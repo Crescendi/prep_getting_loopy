@@ -393,3 +393,6 @@ console.log("overrided objects: ", currentClass);
 
 
 
+=======
+//instructions are in the README file
+>>>>>>> f4c144d0f63e0dd1c0adf968d8bb73e820b51695
